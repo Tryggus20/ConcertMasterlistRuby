@@ -1,24 +1,24 @@
-# README
+# Concert Masterlist
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Development Setup
 
-Things you may want to cover:
+### Prerequisites
 
-* Ruby version
+- [Postgres.app](https://postgresapp.com/)
+- [rbenv](https://github.com/rbenv/rbenv) (easiest to just use [homebrew](https://brew.sh) to install this)
 
-* System dependencies
+### Installation
 
-* Configuration
+1. Clone the repository
+3. Install Ruby version specified in `.ruby-version` using rbenv
+4. Install dependencies: `bundle install`
+5. Create the database: `rails db:create`
+6. Run the migrations: `rails db:migrate`
+8. Run `bin/dev` and run the development server
 
-* Database creation
+### Some notes on what we use
+ Bootstrap, Node, and Yarn
 
-* Database initialization
+## License
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This codebase is currently private, but there's nothing to stop us from making it MIT Licensed!
