@@ -1,0 +1,23 @@
+<p style="color: green"><%= notice %></p>
+
+<h1><%= @artist.name %></h1>
+
+<ul>
+<% @artist.concerts.each do |concert| %>
+  <li>
+    <a href="<%= concert_url(concert) %>">
+      <%= concert.date %>:
+      <%= concert.venue %>,
+      <%= concert.city %>,
+      <%= concert.state %>
+    </a>
+  </li>
+<% end %>
+</ul>
+
+<div>
+  <%= link_to "Edit this artist", edit_artist_path(@artist) %> |
+  <%= link_to "Back to artists", artists_path %>
+
+  <%= button_to "Destroy this artist", @artist, method: :delete %>
+</div>
