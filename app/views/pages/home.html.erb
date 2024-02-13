@@ -1,0 +1,9 @@
+<h1>Pages#home</h1>
+<p>Find me in app/views/pages/home.html.erb</p>
+
+<% if current_user %>
+  <p>Hello, <%= current_user.email %></p>
+  <%= link_to "Sign out", destroy_user_session_path %>
+<% else %>
+  <a href="<%= new_user_session_url %>">Sign in</a>
+<% end %>
